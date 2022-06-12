@@ -1,0 +1,48 @@
+/* мобільний телефон */
+@media (max-width: 568px){
+    header img{
+        height: 110px;
+    }
+    nav{
+        background-color: rgba(255,0,0,0.5);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .info{
+        flex-direction: column; /* розміщення флекс елементів */
+    }
+    .info-img{
+        margin-bottom:15px;
+    }
+    .info-text{
+        width:100%;
+        padding-left:0;
+    }
+    .actor{
+        flex-direction: column;
+    }
+    .actor-img{
+        margin-bottom: 15px;
+    }
+    .actor-text {
+        width: 100%;
+        padding-left:0;
+    }
+    .actor:nth-child(2n) .actor-img{
+        order: 0;
+    }
+    .actor:nth-child(2n) .actor-text{
+        order: 1;
+    }
+    .season{
+        width: 100%;
+    }
+    .foto{
+        width: 100%;
+        height: 300px;
+    }
+    .blooper{
+        width: 100%;
+        height: 250px;
+    }
+}

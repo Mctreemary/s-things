@@ -1,0 +1,140 @@
+/* стилі вспливаючої галереї */
+.modal-active{
+    overflow: hidden;
+}
+.gallery-img{
+    cursor: pointer;
+}
+.m-gallery{
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(000,000,000,0.8);
+    color: #FFFFFF;
+}
+.m-gallery__close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.m-gallery__close:hover{
+    transform: scale(1.2);
+    color: #CCCCCC;
+}
+.m-gallery__wrap{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.1s;
+    animation-name: zoom;
+    animation-duration: 0.1s;
+    box-sizing: border-box;
+}
+.m-gallery__img{
+    max-width: 95%;
+    max-height: 85%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 15px 10px #000000;
+}
+.m-gallery__caption{
+    font-size: 20px;
+}
+.m-gallery button{
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.m-gallery button:hover{
+    color: #CCCCCC;
+    transform: scale(1.2);
+}
+.m-gallery__prev{
+    left: 10px;
+}
+.m-gallery__next{
+    right: 10px;
+}
+@-webkit-keyframes zoom {
+    from{-webkit-transform: scale(0)}
+    to{-webkit-transform: scale(1)}
+}
+@keyframes zoom {
+    from{transform: scale(0)}
+    to{transform: scale(1)}
+}
+/* стилі мобільного меню */
+.fixed{
+    padding-top: 64px;
+}
+.fixed nav{
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+}
+.nav-button{
+    cursor: pointer;
+    margin-left: 15px;
+    color: #FFFFFF;
+    font-size: 32px;
+    border: 0;
+    background: none;
+}
+.nav-close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+nav.open ul{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,0,0,0.7);
+}
+nav ul{
+    display: none;
+}
+nav li{
+    margin-bottom: 15px;
+}
+@media (min-width: 568px) {
+    .nav-button {
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center; /* вирівнювання флекс елементів */
+    }
+    nav li{
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+}

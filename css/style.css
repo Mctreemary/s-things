@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Comfortaa', cursive; /* сімейство шрифтів  */
+    background-image: url(../img/fon.jpg); /* фон заднього зображення */
+    color:#FFFFFF;
+}
+header{
+    background-color:#000000;  /* задній фон */
+    text-align:center;       /* вирівнювання тексту */
+}
+header img {
+    height:210px; /* висота */
+}
+nav {
+    background-color: rgba(255,0,0,1);
+    color:#FFFFFF;
+    font-size:32px;    /* розмір шрифта тексту */
+    padding-top:16px; /* внутрішній відступ вверх */
+    padding-bottom:16px; /* внутрішній відступ вниз */
+}
+nav a {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+nav a:hover{ /* наведення*/
+    text-decoration: underline;
+}
+main {
+    max-width: 1200px; /* максимальна ширина */
+    padding-top:50px;
+    padding-left:15px;
+    padding-right: 15px;
+    font-size:18px;
+    line-height: 30px; /* відстань між рядками тексту */
+    margin: 0 auto; /* вирівнювання блока по центру */
+    padding-bottom:40px;
+}
+.info{
+    display: flex;
+}
+.info-img{
+    width: 310px;
+}
+.info-img img{
+    width: 100%;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 0 .2rem #FFFFFF,   /* тінь */
+    0 0 .2rem #fff,
+    0 0 2rem #ff0000;,
+    0 0 0.8rem #ff0000;,
+    0 0 2.8rem #ff0000;,
+    inset 0 0 1.3rem #ff0000;
+}
+.info-text{
+    width: calc(100% - 310px);
+    padding-left:50px;
+}
+footer{
+    clear:both;
+    background-color: #ff0000;
+    text-align:right;
+    color:#000000;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:20px;
+}
+footer b{
+    text-decoration: underline; /* декорація тексту */
+}
+h1{
+    margin-bottom: 30px;
+}
+.actor{
+    background: rgba(255,255,255,0.7); /* прозорість білого фону */
+    color:#000000;
+    padding:30px;
+    margin-bottom:30px;
+    display: flex;
+    border-radius:20px; /* радіус кутів */
+}
+.actor-img{
+    width:220px;
+}
+.actor-img img{
+    width: 100%;
+    height:300px;
+    object-fit: cover; /* підлаштовуємо зображення в потрібний розмір */
+    border:0;
+}
+.actor-text{
+    width: calc(100% - 220px);
+    padding-left:30px;
+}
+.actor:nth-child(2n) .actor-img{ /* кожен другий однаковий блок */
+    order: 1; /* порядковий номер в клоці flex */
+}
+.actor:nth-child(2n) .actor-text{
+    order: 0;
+    padding-left:0;
+    padding-right: 30px;
+}
+.actor-link{
+    color:#ff0000;
+}
+.actor-link:hover{
+    text-decoration:none;
+}
+.actor-link:hover img{
+    transform: translateX(5px); /* трансформація */
+}
+.seasons-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.season{
+    width: 300px;
+}
+.season img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: all 0.2s ease-in;
+}
+.season img:hover{
+    transform: scale(1.1);
+}
+.all-fotos{
+    display: flex;
+    flex-wrap:wrap; /* перенесення флекс елементів на новий рядок */
+}
+.foto{
+    width:400px;
+    height:400px;
+}
+.foto img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    transition: all 0.2s ease-in; /* плавність трансформації */
+}
+.foto img:hover{
+    transform: scale(1.1);
+}
+.all-bloopers{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blooper{
+    width:400px;
+    height:400px;
+}
+.blooper iframe{
+    width:100%;
+    height:100%;
+}
